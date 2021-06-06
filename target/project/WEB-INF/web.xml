@@ -1,0 +1,66 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>myproject</display-name>
+    <servlet>
+        <servlet-name>RegisterLoginServlet</servlet-name>
+        <servlet-class>com.service.RegisterLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterLoginServlet</servlet-name>
+        <url-pattern>/RegisterLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GoodsServlet</servlet-name>
+        <servlet-class>com.service.GoodsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsServlet</servlet-name>
+        <url-pattern>/GoodsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ShowServlet</servlet-name>
+        <servlet-class>com.service.ShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowServlet</servlet-name>
+        <url-pattern>/ShowServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.service.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/CartServlet</url-pattern>
+    </servlet-mapping>
+        <servlet>
+        <servlet-name>LogServlet</servlet-name>
+        <servlet-class>com.service.LogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogServlet</servlet-name>
+        <url-pattern>/LogServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ManagerServlet</servlet-name>
+        <servlet-class>com.service.ManagerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagerServlet</servlet-name>
+        <url-pattern>/ManagerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AjaxServlet</servlet-name>
+        <servlet-class>com.service.AjaxServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/AjaxServlet</url-pattern>
+    </servlet-mapping>
+    <listener>
+        <listener-class>com.filter.Sessionfilter</listener-class>
+    </listener>
+</web-app>

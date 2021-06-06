@@ -1,0 +1,76 @@
+create database shop;
+
+create table user(
+	username varchar(20) not null,
+	password varchar(20) not null,
+	identity varchar(20) not null,
+	email varchar(30) not null,
+	primary key(username,identity)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user values("root","root","root","majiayu5422@163.com");
+
+create table goods(
+	id varchar(20) not null,
+	name varchar(30) not null,
+	price varchar(10) not null,
+	number int not null,
+	provider varchar(10) not null,
+	class varchar(20) not null,
+	img varchar(30) not null,
+	sell int not null,
+	primary key(id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table cart(
+	id varchar(20) not null,
+	name varchar(30) not null,
+	price varchar(10) not null,
+	provider varchar(30) not null,
+	number int not null,
+	user varchar(30) not null,
+	img varchar(30) not null,
+	primary key(user,id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table log(
+	time varchar(30) not null,
+	user varchar(30) not null,
+	op varchar(10) not null,
+	id varchar(20) not null,
+	name varchar(30) not null,
+	class varchar(20) not null,
+	number int not null,
+	provider varchar(20) not null,
+	price varchar(10) not null,
+	primary key(time, id) 
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table performance(
+	name varchar(30) not null,
+	sport varchar(20) not null,
+	life varchar(20) not null,
+	food varchar(20) not null,
+	electronic varchar(20) not null,
+	cloth varchar(20) not null,
+	allp varchar(20) not null,
+	primary key(name)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table loginlog(
+	username varchar(20) not null,
+	identity varchar(20) not null,
+	logintime varchar(30) not null,
+	logouttime varchar(30) not null,
+	ip varchar(30) not null,
+	primary key(username,identity,logintime)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+create table oplog(
+	username varchar(20) not null,
+	identity varchar(20) not null,
+	time varchar(30) not null,
+	op varchar(20) not null,
+	ip varchar(30) not null,
+	primary key(time,op)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
